@@ -1,0 +1,32 @@
+@import '../../styleUtils/colors.scss';
+
+.studentCard {
+    padding: 20px;
+    border-bottom: 1px solid $graphite;
+    display: flex;
+
+    &__profileImage{
+        border: 1px solid $graphite;
+        border-radius: 50px;
+        height: 100px;
+        width: 100px;
+    }
+
+    &__studentInfo{
+        margin-left: 40px;
+    }
+
+    &__studentName {
+        text-transform: uppercase;
+        font-size: 30px;
+        font-weight: 700;
+        padding-bottom: 10px;
+    }
+
+    &__studentEmail, &__studentCompany, &__studentSkill, &__studentAverage {
+        padding-left: 15px;
+        font-size: 12px;
+        color: gray;
+    }
+}
+
