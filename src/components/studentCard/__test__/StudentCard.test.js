@@ -40,7 +40,23 @@ describe('a card to render the information of one student', () => {
 
     })
 
-    // write tests for the rest of the student card 
+
+    // TESTS TO CONSIDER FOR CODE REVIEW
+
+
+    it('has a plus icon on load', () => {
+        const {getByTestId} = render(<StudentCard studentInfo={student}/>);
+
+        expect(getByTestId('plusIcon')).toBeInTheDocument();
+    })
+
+    it('shows the grades when the plus icon is clicked', () => {
+        const {getByTestId} = render(<StudentCard studentInfo={student}/>);
+        const plusIcon = getByTestId('plusIcon')
+        plusIcon.click();
+        expect(getByTestId('studentCard--gradeReport')).toBeInTheDocument();
+    })
+
 
 
 
